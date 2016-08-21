@@ -18,14 +18,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<body ng-app="BlankApp" ng-cloak>
-  <div class="upper_header" ng-controller="cntr" layout="row" layout-align="end center" style="height:30px;">
+<body ng-app="BlankApp" ng-cloak ng-controller="cntr" ng-init="OnLoadFunction()">
+  <div class="upper_header" layout="row" layout-align="end center" style="height:30px;">
     <a ng-href="#" >Sign In</a>
     <a ng-href="#" flex-offset=5>Sign Up</a>
     <md-input-container flex-offset=5>
     <label>Select Location</label>
-      <md-select ng-model="locationData">
-        <md-option ng-repeat="location in locationData">{{location}}</md-option>
+      <md-select ng-model="locations">
+        <md-option ng-repeat="location in locations">{{location}}</md-option>
       </md-select>
     </md-input-container>
   </div>
