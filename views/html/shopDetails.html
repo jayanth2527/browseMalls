@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <link rel="stylesheet" href="../../public/css/shopDetails.css">
+      <script src="../../public/js/shopDetails.js"></script>
+
+</head>
+<body ng-app="app" ng-controller="shop">
+
+<div class="header">
+header
+</div>
+<div class="body">
+  <div flex layout="row" layout-xs=column>
+    <md-card flex-gt-xs=30 flex-xs=100 class="card">
+      <md-card-header>
+        <md-card-avatar>
+          <img ng-src="../../public/assets/gucci-logo.jpg" alt="logo" class="md-user-avatar" />
+        </md-card-avatar>
+        <md-card-header-text>
+          <span class="md-headline"> GUCCI </span>
+        </md-card-header-text>
+      </md-card-header>
+      <md-card-content layout="column">
+        <div flex="80" class="bigImageDiv">
+          <img ng-src="../../public/assets/{{image}}" alt="gucci brand" class="imgg"/>
+        </div>
+        <div flex="20" layout="row" class="smallImageDiv">
+          <div class="smallImages">
+            <img ng-src="../../public/assets/gucci.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci.jpg')"/>
+          </div>
+          <div class="smallImages">
+            <img ng-src="../../public/assets/gucci2.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci2.jpg')"/>
+          </div>
+          <div class="smallImages">
+            <img ng-src="../../public/assets/gucci3.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci3.jpg')"/>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+    <md-card flex-gt-xs=40 flex-xs=100 class="card" >
+      <md-card-header-text>
+        <h3>Categories in GUCCI Brand</h3>
+      </md-card-header-text>
+      <md-card-content style="overflow-y:scroll;">
+        <md-list>
+          <md-list-item ng-repeat="item in list">
+          <div class="md-list-item-text" layout="row">
+            <h4>{{item.name}}</h4>
+            <p class="md-secondary">{{item.offer}}</p>
+          </div>
+          <md-divider ng-if="!$last"></md-divider>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+    <md-card flex-gt-xs=30 flex-xs=100 class="card">
+      <md-card-header-text>
+        <h3>Contact Address</h3>
+      </md-card-header-text>
+      <md-card-content>
+        <h4>Sansar In Style</h4>
+        <h6>Garment Shops 1.0</h6>
+
+        <i class="material-icons">phone</i>(080) 42062486,09916326242 <br>
+        <i class="material-icons">location_on</i>Kaggadasapura, Bangalore
+        Allen Solly,Bonsoir,Jockey,Lotto,Louis Philippe
+      </md-card-content>
+    </md-card>
+  </div>
+  <md-button class="md-primary md-raised" style="width:100%;overflow:auto;">
+    View More
+  </md-button>
+
+
+</div>
+<div class="footer">
+footer
+</div>
+
+</body>
+</html>

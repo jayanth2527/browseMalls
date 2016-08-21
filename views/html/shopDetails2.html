@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <link rel="stylesheet" href="../../public/css/shopDetails2.css">
+      <link rel="stylesheet" href="../../public/css/shopDetails.css">
+      <link rel="stylesheet" href="../../public/css/frontPage.css">
+      <script src="../../public/js/shopDetails.js"></script>
+      <script src="../../public/js/frontPageScript.js"></script>
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="shop">
+  <div class="upper_header" layout="row" layout-align="end center" style="height:30px;">
+    <a ng-href="#" >Sign In</a>
+    <a ng-href="#" flex-offset=5>Sign Up</a>
+    <md-input-container flex-offset=5>
+    <label>Select Location</label>
+      <md-select ng-model="locationData">
+        <md-option ng-repeat="location in locationData">{{location}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+    <div class="header" layout="row" layout-align="center center">
+      <div>
+        <img ng-src="../../public/assets/logo.png" alt="" class="main_logo"/>
+      </div>
+      <div ng-mouseover="openExploreFunction()" ng-mouseleave="closeExploreFunction()" id="exploreDropbox">
+        Explore by Category
+        <i class="material-icons" ng-hide=explore>keyboard_arrow_down</i>
+        <i class="material-icons" ng-show=explore>keyboard_arrow_up</i>
+        <div ng-show="explore" class="exploreBox" layout=column>
+          <div layout=row>
+            <span class="spanExplore">Home | </span>
+            <span class="spanExplore">Men | </span>
+            <span class="spanExplore">Women | </span>
+            <span class="spanExplore">Baby and Kids | </span>
+            <span class="spanExplore">Furniture | </span>
+            <span class="spanExplore">Books</span>
+          </div>
+          <div layout=row>
+            <span class="spanExplore">Events | </span>
+            <span class="spanExplore">Laptops | </span>
+            <span class="spanExplore">Food | </span>
+            <span class="spanExplore">Sports | </span>
+            <span class="spanExplore">Others | </span>
+            <span class="spanExplore"></span>
+          </div>
+        </div>
+      </div>
+      <div flex-offset="45">
+        <md-input-container>
+          <label>Search</label>
+          <input ng-model="search">
+        </md-input-container>
+        <i class="material-icons">search</i>
+      </div>
+    </div><!--header end-->
+
+<div class="body">
+
+
+<div flex layout="row" layout-xs="column">
+  <md-card flex-gt-xs=70 flex-xs=100>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../../public/assets/lifestyle.jpg" alt="Chania" >
+        </div>
+        <div class="item">
+          <img src="../../public/assets/lifestyle2.jpg" alt="Chania" >
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </md-card>
+  <md-card flex-gt-xs=30 flex-xs=100>
+    <md-card-header-text>
+      <h3>Contact Address</h3>
+    </md-card-header-text>
+    <md-card-content>
+      <h4>Sansar In Style</h4>
+      <h6>Garment Shops 1.0</h6>
+
+      <i class="material-icons">phone</i>(080) 42062486,09916326242 <br>
+      <i class="material-icons">location_on</i>Kaggadasapura, Bangalore
+      Allen Solly,Bonsoir,Jockey,Lotto,Louis Philippe
+    </md-card-content>
+  </md-card>
+</div>
+
+<div flex layout="row" layout-xs=column>
+  <md-card flex-gt-xs=30 flex-xs=100 class="card">
+    <md-card-header>
+      <md-card-avatar>
+        <img ng-src="../../public/assets/gucci-logo.jpg" alt="logo" class="md-user-avatar" />
+      </md-card-avatar>
+      <md-card-header-text>
+        <span class="md-headline"> GUCCI </span>
+      </md-card-header-text>
+    </md-card-header>
+    <md-card-content layout="column">
+      <div flex="80" class="bigImageDiv">
+        <img ng-src="../../public/assets/{{image}}" alt="gucci brand" class="imgg"/>
+      </div>
+      <div flex="20" layout="row" class="smallImageDiv">
+        <div class="smallImages">
+          <img ng-src="../../public/assets/gucci.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci.jpg')"/>
+        </div>
+        <div class="smallImages">
+          <img ng-src="../../public/assets/gucci2.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci2.jpg')"/>
+        </div>
+        <div class="smallImages">
+          <img ng-src="../../public/assets/gucci3.jpg" alt="gucci brand" class="imgg" ng-click="showImg('gucci3.jpg')"/>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+  <!-- <md-card flex-gt-xs=40 flex-xs=100 class="card" >
+    <md-card-header-text>
+      <h3>Categories in GUCCI Brand</h3>
+    </md-card-header-text>
+    <md-card-content style="overflow-y:scroll;">
+      <md-list>
+        <md-list-item ng-repeat="item in list">
+        <div class="md-list-item-text" layout="row">
+          <h4>{{item.name}}</h4>
+          <p class="md-secondary">{{item.offer}}</p>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+  </md-card> -->
+  <md-card flex-gt-xs=70 flex-xs=100 class="card">
+    <md-card-header-text>
+      <h3>Brands in Lifestyle</h3>
+    </md-card-header-text>
+    <md-card-content style="overflow-y:scroll">
+
+        <div  ng-repeat="brand in list2">
+          <h2>{{brand.brandName}}</h2>
+          <md-list class="nestedList">
+            <md-list-item ng-repeat="item in brand.categories" >
+              <div class="md-list-item-text" layout="row">
+                <h4>{{item.name}}</h4>
+                <p class="md-secondary">{{item.offer}}</p>
+              </div>
+              <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+          </md-list>
+        <!-- <md-divider ng-if="!$last"></md-divider> -->
+
+      </div>
+    </md-card-content>
+  </md-card>
+</div>
+<md-button class="md-primary md-raised" style="width:100%;overflow:auto;">
+  View More
+</md-button>
+
+
+</div>
+<div class="footer">
+  footer
+</div>
+
+</body>
+</html>

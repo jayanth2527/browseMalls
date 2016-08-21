@@ -1,0 +1,92 @@
+[
+  {
+    "id":"levis",
+    "name":"Levis",
+    "mall_id":["blr-for-kor","blr-for-whi","blr-sho-kor","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men","women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"puma",
+    "name":"Puma",
+    "mall_id":["blr-for-kor","blr-tot-mad","blr-sho-kor","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men","women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"nike",
+    "name":"Nike",
+    "mall_id":["blr-for-kor","blr-sho-kor","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men","women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"and",
+    "name":"AND",
+    "mall_id":["blr-for-kor","blr-for-whi","blr-sho-kor","hyd-gvk-jub"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"pepe_jeans",
+    "name":"PePe Jeans",
+    "mall_id":["blr-for-kor","blr-pho-mah","blr-sho-kor","hyd-ino-ban"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men","women","kids"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"adidas",
+    "name":"Adidas",
+    "mall_id":["blr-for-kor","blr-for-whi","blr-sho-kor","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men","women","kids"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"elle",
+    "name":"Elle",
+    "mall_id":["blr-for-kor","blr-sho-kor","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"mustard",
+    "name":"Mustard",
+    "mall_id":["blr-for-kor","che-for-kor","hyd-ino-ban","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["women"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"raymonds",
+    "name":"Reymonds",
+    "mall_id":["blr-for-kor","hyd-ino-ban","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  },
+  {
+    "id":"peter_england",
+    "name":"Peter England",
+    "mall_id":["blr-for-kor","che-for-kor","hyd-ino-ban","che-phe-vel"],
+    "floor":["Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor","Shop No:32,Ground floor"],
+    "gender":["men"],
+    "category":["Shirts","Jeans","Trousers","Briefs","Trunks","Belts","Wallets","Jackets","T-Shirts","Footwear"],
+
+  }
+]

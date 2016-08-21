@@ -1,0 +1,93 @@
+[
+  {
+    "cashback":
+    [
+      {
+        "brand_id":"puma",
+        "mall_id":"blr-for-kor",
+        "offerDetails":"10% cashback on shoes"
+      },
+      {
+        "brand_id":"puma",
+        "mall_id":"blr-for-whi",
+        "offerDetails":"5% cashback on shoes"
+      }
+    ],
+    "discount":[
+      {
+        "brand_id":"levis",
+        "mall_id":"blr-for-kor",
+        "offerDetails":"10% discount on shoes"
+      },
+      {
+        "brand_id":"pepe_jeans",
+        "mall_id":"blr-for-whi",
+        "offerDetails":"35% discount on shirts"
+      }
+    ],
+    "wallet":[
+      {
+        "brand_id":"and",
+        "mall_id":"hyd-ino-ban",
+        "offerDetails":"10% discount on using Mobikwik"
+      },
+      {
+        "brand_id":"puma",
+        "mall_id":"che-phe-vel",
+        "offerDetails":"5% discount on paytm"
+      }
+    ],
+    "bank":[
+      {
+        "brand_id":"puma",
+        "mall_id":"blr-for-kor",
+        "offerDetails":"10% discount on 4999"
+      },
+      {
+        "brand_id":"levis",
+        "mall_id":"che-phe-vel",
+        "offerDetails":"5% discount on 5000"
+      }
+    ],
+    "first_time_user":[{
+      "brand_id":"elle",
+      "mall_id":"blr-for-kor",
+      "offerDetails":"500 discount on Apparels"
+    },
+    {
+      "brand_id":"raymonds",
+      "mall_id":"blr-for-whi",
+      "offerDetails":"250 discount on Apparels"
+    }],
+    "buy_x_get_x":[{
+      "brand_id":"peter_england",
+      "mall_id":"blr-for-kor",
+      "offerDetails":"Buy 2 get 2"
+    },
+    {
+      "brand_id":"peter_england",
+      "mall_id":"blr-for-whi",
+      "offerDetails":"Buy 3 get 4"
+    }],
+    "emi":[{
+      "brand_id":"mustard",
+      "mall_id":"blr-for-kor",
+      "offerDetails":"12% Interest for 12 months"
+    },
+    {
+      "brand_id":"adidas",
+      "mall_id":"blr-for-whi",
+      "offerDetails":"0 % Interest for 12 months"
+    }],
+    "flash_offers":[{
+      "brand_id":"nike",
+      "mall_id":"blr-for-kor",
+      "offerDetails":"2x points on 2pm-4pm sale"
+    },
+    {
+      "brand_id":"nike",
+      "mall_id":"blr-for-whi",
+      "offerDetails":"2x points on 6pm-8pm sale"
+    }]
+  }
+]

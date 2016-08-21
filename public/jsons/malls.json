@@ -1,0 +1,94 @@
+[
+{
+  "id":"blr-for-kor",
+  "name":"Forum Mall-Koramangala",
+  "Location":"Bangalore",
+  "address":"Forum Mall,Hosur Road, Koramangala, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-for-whi",
+  "name":"Forum Mall-WhiteField",
+  "Location":"Bangalore",
+  "address":"Forum Mall, WhiteField, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312",
+  "cbs":"offer_id"
+},
+{
+  "id":"blr-tot-mad",
+  "name":"Total Mall-Madivala",
+  "Location":"Bangalore",
+  "address":"Total Mall,Hosur Road, Madivala, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-sho-kor",
+  "name":"ShopperStop-Koramangala",
+  "Location":"Bangalore",
+  "address":"Beside Forum Mall,Hosur Road, Koramangala, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-pho-mah",
+  "name":"Phoenix-Mahadevapura",
+  "Location":"Bangalore",
+  "address":"Phoenix Mall, Mahadevapura, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-oas-kor",
+  "name":"Oasis Mall-Koramangala",
+  "Location":"Bangalore",
+  "address":"Oasis Mall, Sony Signal, Koramangala, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-cen-bel",
+  "name":"Central Mall-Bellandur",
+  "Location":"Bangalore",
+  "address":"Central Mall, Bellandur, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-gop-jpn",
+  "name":"Gopalan Mall-J.P.Nagar",
+  "Location":"Bangalore",
+  "address":"Gopalan Mall, J.P.Nagar, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"blr-gop-krp",
+  "name":"Gopalan Mall-K.R.Puram",
+  "Location":"Bangalore",
+  "address":"Gopalan Mall, K.R.Puram, Bangalore, Pin-560029",
+  "contact":"080-8080808, 9083190312"
+},
+{
+  "id":"che-for-kor",
+  "name":"White Forum Mall-Vadapalani",
+  "Location":"Chennai",
+  "address":"Gopalan Mall, Vadapalani, Chennai ,pin-600001",
+  "contact":"044-8080808, 9083190312"
+},
+{
+  "id":"che-phe-vel",
+  "name":"Phoenix Mall-Velachery",
+  "Location":"Chennai",
+  "address":"Phoenix Mall, Velachery, Chennai ,pin-600001",
+  "contact":"044-8080808, 9083190312"
+},
+{
+  "id":"hyd-gvk-jub",
+  "name":"GVK Mall-Jubli Hills",
+  "Location":"Hyderabad",
+  "address":"GVK Mall, Jubli Hills, Hyderabad ,pin-500082",
+  "contact":"040-8080808, 9083190312"
+},
+{
+  "id":"hyd-ino-ban",
+  "name":"Inorbit Mall-Banjara Hills",
+  "Location":"Hyderabad",
+  "address":"Inorbit Mall, Banjara Hills, Hyderabad ,pin-500082",
+  "contact":"040-8080808, 9083190312"
+}
+]

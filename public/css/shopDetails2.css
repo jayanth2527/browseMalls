@@ -1,0 +1,28 @@
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+}
+.header{
+  /*height: 10%;*/
+  height: 80px;
+
+  background-color: #DCDCDC;
+  /*position: relative;;*/
+}
+.body{
+  /*height: 80%;*/
+}
+.footer{
+  height: 100px;
+  /*height: 10%;*/
+  /*position: relative;*/
+  border-top : 1px solid blue;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: auto;
+}
+.nestedList{
+  overflow-y: scroll;
+  height: 150px;
+}
