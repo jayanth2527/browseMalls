@@ -348,98 +348,198 @@ app.controller("cntr",function($http, $scope,$mdDialog){
 
 
   //filter offers
-  var offer_details={
-      "cashback":
-      [
-        {
-          "brand_id":"puma",
-          "mall_id":"blr-for-kor",
-          "offerDetails":"10% cashback on shoes"
-        },
-        {
-          "brand_id":"puma",
-          "mall_id":"blr-for-whi",
-          "offerDetails":"5% cashback on shoes"
-        }
-      ],
-      "discount":[
-        {
-          "brand_id":"levis",
-          "mall_id":"blr-for-kor",
-          "offerDetails":"10% discount on shoes"
-        },
-        {
-          "brand_id":"pepe_jeans",
-          "mall_id":"blr-for-whi",
-          "offerDetails":"35% discount on shirts"
-        }
-      ],
-      "wallet":[
-        {
-          "brand_id":"and",
-          "mall_id":"hyd-ino-ban",
-          "offerDetails":"10% discount on using Mobikwik"
-        },
-        {
-          "brand_id":"puma",
-          "mall_id":"che-phe-vel",
-          "offerDetails":"5% discount on paytm"
-        }
-      ],
-      "bank":[
-        {
-          "brand_id":"puma",
-          "mall_id":"blr-for-kor",
-          "offerDetails":"10% discount on 4999"
-        },
-        {
-          "brand_id":"levis",
-          "mall_id":"che-phe-vel",
-          "offerDetails":"5% discount on 5000"
-        }
-      ],
-      "first_time_user":[{
-        "brand_id":"elle",
+  $scope.offer_details=[
+  {
+    "offer_name":"Cashback",
+    "offer_objects":[
+      {
+        "brand_id":"puma",
         "mall_id":"blr-for-kor",
-        "offerDetails":"500 discount on Apparels"
+        "image_url":"public/assets/brand.jpg",
+        "offer":"10% cashback on shoes"
       },
       {
-        "brand_id":"raymonds",
+        "brand_id":"puma",
         "mall_id":"blr-for-whi",
-        "offerDetails":"250 discount on Apparels"
-      }],
-      "buy_x_get_x":[{
-        "brand_id":"peter_england",
-        "mall_id":"blr-for-kor",
-        "offerDetails":"Buy 2 get 2"
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"5% cashback on shoes"
       },
       {
-        "brand_id":"peter_england",
+        "brand_id":"nike",
         "mall_id":"blr-for-whi",
-        "offerDetails":"Buy 3 get 4"
-      }],
-      "emi":[{
+        "image_url":"public/assets/brand2.jpg",
+        "offer":"10% cashback on tracks"
+      }
+    ]
+  },
+  {
+    "offer_name":"Discount",
+    "offer_objects":[
+      {
+        "brand_id":"levis",
+        "mall_id":"blr-for-kor",
+        "image_url":"public/assets/brand.jpg",
+        "offer":"10% discount on shoes"
+      },
+      {
+        "brand_id":"pepe_jeans",
+        "mall_id":"blr-for-whi",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"35% discount on shirts"
+      },
+      {
+        "brand_id":"pepe_jeans",
+        "mall_id":"blr-for-whi",
+        "image_url":"public/assets/brand2.jpg",
+        "offer":"35% discount on shirts"
+      }
+    ]
+  },
+  {
+    "offer_name":"Wallet",
+    "offer_objects":[
+      {
+        "brand_id":"and",
+        "mall_id":"hyd-ino-ban",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"10% discount on using Mobikwik"
+      },
+      {
+        "brand_id":"puma",
+        "mall_id":"che-phe-vel",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"5% discount on paytm"
+      },
+      {
+        "brand_id":"puma",
+        "mall_id":"che-phe-vel",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"5% discount on paytm"
+      }
+    ]
+  },
+  {
+    "offer_name":"Bank",
+    "offer_objects":[
+      {
+        "brand_id":"puma",
+        "mall_id":"blr-for-kor",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"10% discount on 4999"
+      },
+      {
+        "brand_id":"levis",
+        "mall_id":"che-phe-vel",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"5% discount on 5000"
+      },
+      {
+        "brand_id":"levis",
+        "mall_id":"che-phe-vel",
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"5% discount on 5000"
+      }
+    ]
+  },
+  {
+    "offer_name":"First Time User",
+    "offer_objects":[
+      {
+      "brand_id":"elle",
+      "mall_id":"blr-for-kor",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"500 discount on Apparels"
+      },
+      {
+      "brand_id":"raymonds",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"250 discount on Apparels"
+      },
+      {
+      "brand_id":"raymonds",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"250 discount on Apparels"
+      }
+    ]
+  },
+  {
+    "offer_name":"Buy X get X",
+    "offer_objects":[
+      {
+      "brand_id":"peter_england",
+      "mall_id":"blr-for-kor",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"Buy 2 get 2"
+      },
+      {
+      "brand_id":"peter_england",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"Buy 3 get 4"
+      },
+      {
+      "brand_id":"peter_england",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"Buy 3 get 4"
+      }
+    ]
+  },
+  {
+    "offer_name":"EMI",
+    "offer_objects":[
+      {
         "brand_id":"mustard",
         "mall_id":"blr-for-kor",
-        "offerDetails":"12% Interest for 12 months"
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"12% Interest for 12 months"
       },
       {
         "brand_id":"adidas",
         "mall_id":"blr-for-whi",
-        "offerDetails":"0 % Interest for 12 months"
-      }],
-      "flash_offers":[{
-        "brand_id":"nike",
-        "mall_id":"blr-for-kor",
-        "offerDetails":"2x points on 2pm-4pm sale"
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"0 % Interest for 12 months"
       },
       {
-        "brand_id":"nike",
+        "brand_id":"adidas",
         "mall_id":"blr-for-whi",
-        "offerDetails":"2x points on 6pm-8pm sale"
-      }]
-    };
-
+        "image_url":"public/assets/brand1.jpg",
+        "offer":"0 % Interest for 12 months"
+      }
+    ]
+  },
+  {
+    "offer_name":"Flash Offers",
+    "offer_objects":[
+      {
+      "brand_id":"nike",
+      "mall_id":"blr-for-kor",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"2x points on 2pm-4pm sale"
+    },
+    {
+      "brand_id":"nike",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand1.jpg",
+      "offer":"2x points on 6pm-8pm sale"
+    },
+    {
+      "brand_id":"nike",
+      "mall_id":"blr-for-whi",
+      "image_url":"public/assets/brand2.jpg",
+      "offer":"2x points on 6pm-8pm sale"
+    }
+    ]
+  },
+  {
+    "offer_name":"On x purchase free gift",
+    "offer_objects":[
+      
+    ]
+  }
+];
 
    var selected_brand_name;
    var selected_brand_name_id;
@@ -474,7 +574,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
             console.log(selected_brand_name_id);
             console.log(selected_mall_id);
             if(selected_brand_name_id==cashback_array[i].brand_id&&selected_mall_id==cashback_array[i].mall_id){
-              cashback_offer_array.push(cashback_array[i].offerDetails);
+              cashback_offer_array.push(cashback_array[i].offer);
             }
           }
        }
@@ -485,7 +585,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==discount_array[i].brand_id&&selected_mall_id==discount_array[i].mall_id){
-             discount_offer_array.push(discount_array[i].offerDetails);
+             discount_offer_array.push(discount_array[i].offer);
            }
          }
        }
@@ -496,7 +596,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==wallet_array[i].brand_id&&selected_mall_id==wallet_array[i].mall_id){
-             wallet_offer_array.push(wallet_array[i].offerDetails);
+             wallet_offer_array.push(wallet_array[i].offer);
            }
          }
        }
@@ -507,7 +607,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==bank_array[i].brand_id&&selected_mall_id==bank_array[i].mall_id){
-             bank_offer_array.push(bank_array[i].offerDetails);
+             bank_offer_array.push(bank_array[i].offer);
            }
          }
        }
@@ -518,7 +618,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==first_time_user_array[i].brand_id&&selected_mall_id==first_time_user_array[i].mall_id){
-             first_time_user_offer_array.push(first_time_user_array[i].offerDetails);
+             first_time_user_offer_array.push(first_time_user_array[i].offer);
            }
          }
        }
@@ -529,7 +629,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==buy_x_get_x_array[i].brand_id&&selected_mall_id==buy_x_get_x_array[i].mall_id){
-             buy_x_get_x_offer_array.push(buy_x_get_x_array[i].offerDetails);
+             buy_x_get_x_offer_array.push(buy_x_get_x_array[i].offer);
            }
          }
        }
@@ -540,7 +640,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==emi_array[i].brand_id&&selected_mall_id==emi_array[i].mall_id){
-             emi_offer_array.push(emi_array[i].offerDetails);
+             emi_offer_array.push(emi_array[i].offer);
            }
          }
        }
@@ -551,7 +651,7 @@ app.controller("cntr",function($http, $scope,$mdDialog){
            console.log(selected_brand_name_id);
            console.log(selected_mall_id);
            if(selected_brand_name_id==flash_array[i].brand_id&&selected_mall_id==flash_array[i].mall_id){
-             flash_offer_array.push(flash_array[i].offerDetails);
+             flash_offer_array.push(flash_array[i].offer);
            }
          }
        }

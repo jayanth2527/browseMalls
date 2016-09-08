@@ -29,6 +29,8 @@
       </md-select>
     </md-input-container>
   </div>
+  <!--upperhead completed-->
+  <!--header navbar start-->
   <div ng-controller="cntr" layout="column" layout="center center" ng-cloak>
 
     <div id="header" layout="row" layout-align="center center" style="margin-bottom:5px;">
@@ -114,9 +116,11 @@
 
 
     </div>
-    <!--image end-->
+    <!--carousel end-->
+
      <div layout="column" layout-align="center center">
          <div id="mainContent" layout="row" flex=100>
+           <!--left section start-->
             <div layout="column" flex=20>
               <md-card layout=column style="height:250px;">
                  <md-card-header-text>
@@ -169,8 +173,9 @@
                     </md-checkbox>
                 </md-card-content>
               </md-card>
-            </div><!--left section end-->
-
+            </div>
+            <!--left section end-->
+            <!--right section start-->
             <div flex="80" layout="column">
 
               <div style="height:40px;background-color:white;" layout=column layout-align="center">
@@ -181,186 +186,31 @@
                 </div>
               </div>
               <md-tabs md-border-bottom md-dynamic-height style="width:980px;">
-                <md-tab label="Cash Back">
+                <md-tab label={{offer_type.offer_name}} ng-repeat="offer_type in offer_details">
                   <md-content>
                     <div layout="row" layout-align="center center">
-                      <md-card layout="column" layout-align="center center">
+                      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_type.offer_objects">
                           <md-card-content>
-                            <img src="public/assets/brand.jpg">
+                            <img src={{card.image_url}}>
                             <div layout="row">
                               <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
+                              <h4>{{card.mall_id}}</h4>
+                              <!-- <h4>Forum Koramangala</h4> -->
                             </div>
                             <div layout="row">
                               <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
+                              <h4>{{card.offer}}</h4>
                             </div>
                           </md-card-content>
                           <md-card-actions>
                             <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
                           </md-card-actions>
                       </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand1.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand2.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Total Madivala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on tracks</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
+
                     </div><!--brand ends-->
                   </md-content>
                 </md-tab>
-                <md-tab label="Discount">
-                  <md-content>
-                    <div layout="row" layout-align="center center">
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand1.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand2.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                    </div><!--brand ends-->
-                  </md-content>
-                </md-tab>
-                <md-tab label="Wallet">
-                  <md-content>
-                    <div layout="row" layout-align="center center">
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand1.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                      <md-card layout="column" layout-align="center center">
-                          <md-card-content>
-                            <img src="public/assets/brand2.jpg">
-                            <div layout="row">
-                              <h4>Mall : </h4>
-                              <h4>Forum Koramangala</h4>
-                            </div>
-                            <div layout="row">
-                              <h4>Offer : </h4>
-                              <h4>10% cashback on all</h4>
-                            </div>
-                          </md-card-content>
-                          <md-card-actions>
-                            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                          </md-card-actions>
-                      </md-card>
-                    </div><!--brand ends-->
-                  </md-content>
-                </md-tab>
-                <md-tab label="Bank">
 
-                </md-tab>
-                <md-tab label="First Time User">
-
-                </md-tab>
-                <md-tab label="Buy x Get x">
-
-                </md-tab>
-                <md-tab label="EMI">
-
-                </md-tab>
-                <md-tab label="Flash Offers">
-
-                </md-tab>
-                <md-tab label="On x purchase free gift">
-
-                </md-tab>
 
               </md-tabs>
 
@@ -400,11 +250,11 @@
                 </md-card>
               </div> -->
               <!--brand ends-->
-              <div layout="row" id="secondToolbar" layout-align="center center" style="height:40px;">
+              <div layout="row" id="secondToolbar"  style="text-align:center;background-color:grey;height:40px;">
                 Trending Offers
               </div>
-              <div layout="row" layout-align="center center">
-                <md-card  >
+              <div layout="row" >
+                <md-card layout="column" layout-align="center center" >
                     <md-card-content>
                       <img src="public/assets/trendingOffer2.jpg">
                       <div layout="row">
@@ -420,7 +270,7 @@
                       <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
                     </md-card-actions>
                 </md-card>
-                <md-card >
+                <md-card layout="column" layout-align="center center" >
                     <md-card-content>
                       <img src="public/assets/trendingOffer3.png">
                       <div layout="row">
@@ -436,7 +286,7 @@
                       <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
                     </md-card-actions>
                 </md-card>
-                <md-card >
+                <md-card layout="column" layout-align="center center">
                     <md-card-content>
                       <img src="public/assets/trendingOffer4.jpg">
                       <div layout="row">

@@ -1,0 +1,192 @@
+<md-tab label="Discount">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.discount">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="Wallet">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.wallet">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="Bank">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.bank">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="First Time User">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.first_time_user">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="Buy x Get x">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.buy_x_get_x">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="EMI">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.emi">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="Flash Offers">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.flash_offers">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
+<md-tab label="On x purchase free gift">
+  <md-content>
+    <div layout="row" layout-align="center center">
+      <md-card layout="column" layout-align="center center" ng-repeat="card in offer_details.cashback">
+          <md-card-content>
+            <img src={{card.image_url}}>
+            <div layout="row">
+              <h4>Mall : </h4>
+              <h4>{{card.mall_id}}</h4>
+              <!-- <h4>Forum Koramangala</h4> -->
+            </div>
+            <div layout="row">
+              <h4>Offer : </h4>
+              <h4>{{card.offer}}</h4>
+            </div>
+          </md-card-content>
+          <md-card-actions>
+            <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+          </md-card-actions>
+      </md-card>
+
+    </div><!--brand ends-->
+  </md-content>
+</md-tab>
