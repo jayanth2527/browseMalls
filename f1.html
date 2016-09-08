@@ -1,7 +1,10 @@
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Javascript libs-->
+
   <!-- Angular Material style sheet -->
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
@@ -9,14 +12,18 @@
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
   <link rel="stylesheet" href="public/css/frontPage.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Angular Material Library -->
+
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
   <script src="public/js/frontPageScript.js"></script>
 
   <!-- bootstrap -->
+
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body ng-app="BlankApp" ng-cloak ng-controller="cntr" ng-init="OnLoadFunction()">
   <div class="upper_header" layout="row" layout-align="end center" style="height:30px;">
@@ -25,18 +32,16 @@
     <md-input-container flex-offset=5>
     <label>Select Location</label>
       <md-select ng-model="locations">
-        <md-option ng-repeat="location in locations track by $index" ng-click="locationFunction(location);">{{location}}</md-option>
+        <md-option ng-repeat="location in locations">{{location}}</md-option>
       </md-select>
     </md-input-container>
   </div>
-  <div ng-controller="cntr" layout="column" layout="center center" ng-cloak>
+  <div id="header" layout="row" layout-align="start center" style="margin-bottom:5px;">
 
-    <div id="header" layout="row" layout-align="center center" style="margin-bottom:5px;">
-      <div layout=row>
-        <div>
-          <img ng-src="public/assets/logo.png" alt="" class="main_logo"/>
-        </div>
-        <div ng-mouseover="openExploreFunction()" ng-mouseleave="closeExploreFunction()" id="exploreDropbox">
+      <div>
+        <img ng-src="public/assets/logo.png" alt=""/>
+      </div>
+      <div ng-mouseover="openExploreFunction()" ng-mouseleave="closeExploreFunction()" id="exploreDropbox">
           Explore by Category
           <i class="material-icons" ng-hide=explore>keyboard_arrow_down</i>
           <i class="material-icons" ng-show=explore>keyboard_arrow_up</i>
@@ -59,34 +64,16 @@
             </div>
           </div>
         </div>
-      </div>
-      <div flex-offset="45">
+
+      <div flex-offset=50>
         <md-input-container>
           <label>Search</label>
           <input ng-model="search">
         </md-input-container>
         <i class="material-icons">search</i>
       </div>
-    </div>
-    <!--header end-->
-    <!-- <div id="toolbar" layout="row" layout-align="center center">
-      <a href="#" flex-offset="5">Home</a>
-      <a href="#" flex-offset="5">Men</a>
-      <a href="#" flex-offset="5">Women</a>
-      <a href="#" flex-offset="5">Baby and kids</a>
-      <a href="#" flex-offset="5">Furniture</a>
-      <a href="#" flex-offset="5">Books</a>
-      <a href="#" flex-offset="5">Events</a>
-      <a href="#" flex-offset="5">Laptops</a>
-      <a href="#" flex-offset="5">Food</a>
-      <a href="#" flex-offset="5">Sports</a>
-      <a href="#" flex-offset="5">Others</a>
-    </div> -->
-    <!--toolbar end-->
-    <div>
-      <!-- carousel -->
-       <!-- <img src="public/assets/main_page_pic1.jpg" style="width:100%;height:80%;"> -->
-       <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
          <!-- Indicators -->
          <ol class="carousel-indicators">
            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -110,26 +97,21 @@
            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
            <span class="sr-only">Next</span>
          </a>
-       </div>
-
-
-    </div>
-    <!--image end-->
-     <div layout="column" layout-align="center center">
-         <div id="mainContent" layout="row" flex=100>
-            <div layout="column" flex=20>
-              <md-card layout=column style="height:250px;">
+  </div>
+  <div id="mainContent" layout="row" >
+    <!--left section starts-->
+    <div layout="column" flex="20">
+              <h4 layout=row layout-align="center">Bangalore</h4>
+              <md-card style="height:500px;">
                  <md-card-header-text>
-                   <h4 layout=row layout-align="center">{{selected_location}}</h4>
-                    <hr>
                    <h4 layout=row layout-align="center">List of Malls</h4>
                  </md-card-header-text>
                  <md-input-container>
                    <label>Enter mall name</label>
                    <input ng-model="mall">
                  </md-input-container>
-                 <md-card-content ng-model="filter_malls" layout=column style="overflow-y:scroll;">
-                   <md-checkbox ng-repeat="mall in filter_malls track by $index" ng-click="brandFunction(mall);">
+                 <md-card-content layout=column style="overflow-y:scroll;">
+                   <md-checkbox ng-model="selectedMall" ng-repeat="mall in data">
                      {{mall}}
                    </md-checkbox>
                   <!-- <md-input-container>
@@ -140,7 +122,7 @@
                   </md-input-container> -->
                  </md-card-content>
               </md-card>
-              <md-card style="height:150px;" layout=column >
+              <md-card style="height:500px;">
                 <md-card-header-text>
                   <h4 layout=row layout-align="center">Brands</h4>
                 </md-card-header-text>
@@ -149,12 +131,12 @@
                   <input ng-model="brand">
                 </md-input-container>
                 <md-card-content layout="column" style="overflow-y:scroll;">
-                    <md-checkbox ng-model="brands" ng-repeat="brand in brands track by $index" ng-click="offerFunction(brand)">
-                      {{brand}}
+                    <md-checkbox ng-model="selectedBrand" ng-repeat="brands in brandData"  >
+                      {{brands}}
                     </md-checkbox>
                 </md-card-content>
               </md-card>
-              <md-card style="height:150px;" layout=column>
+              <md-card style="height:500px;">
                 <md-card-header-text>
                   <h4 layout=row layout-align="center">Multi Brand</h4>
                 </md-card-header-text>
@@ -169,18 +151,16 @@
                     </md-checkbox>
                 </md-card-content>
               </md-card>
-            </div><!--left section end-->
-
-            <div flex="80" layout="column">
-
-              <div style="height:40px;background-color:white;" layout=column layout-align="center">
-                <div class="titleTextDiv">
-                  <span class="titleTextSpan">
-                    Offers
-                  </span>
-                </div>
-              </div>
-              <md-tabs md-border-bottom md-dynamic-height style="width:980px;">
+    </div><!--left section end-->
+    <!--right section start-->
+    <div layout="column" flex="80">
+      <br>
+      <div class="titleTextDiv">
+        <span class="titleTextSpan">
+          Offers
+        </span>
+      </div>
+      <md-tabs md-border-bottom md-dynamic-height >
                 <md-tab label="Cash Back">
                   <md-content>
                     <div layout="row" layout-align="center center">
@@ -361,148 +341,105 @@
                 <md-tab label="On x purchase free gift">
 
                 </md-tab>
-
-              </md-tabs>
-
-              <!-- <div layout="row" id="secondToolbar" layout-align="center center" style="height:40px;">
-                <a href="#" flex-offset="5" class="active">Cash Back</a>
-                <a href="#" flex-offset="10">Discount</a>
-                <a href="#" flex-offset="10">Wallet</a>
-                <a href="#" flex-offset="10">Bank</a>
-                <a href="#" flex-offset="10">First time User</a>
-                <a href="#" flex-offset="10">Buy x Get x</a>
-              </div> -->
-              <!--toolbar end-->
-              <!-- <div layout="row">
-                <md-card layout-align="center center">
-                    <md-card-content>
-                      <img src="public/assets/brand.jpg">
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-                <md-card layout-align="center center">
-                    <md-card-content>
-                      <img src="public/assets/brand1.jpg">
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-                <md-card layout-align="center center">
-                    <md-card-content>
-                      <img src="public/assets/brand2.jpg">
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-              </div> -->
-              <!--brand ends-->
-              <div layout="row" id="secondToolbar" layout-align="center center" style="height:40px;">
-                Trending Offers
-              </div>
-              <div layout="row" layout-align="center center">
-                <md-card  >
-                    <md-card-content>
-                      <img src="public/assets/trendingOffer2.jpg">
-                      <div layout="row">
-                        <h4>Mall : </h4>
-                        <h4>Forum Koramangala</h4>
-                      </div>
-                      <div layout="row">
-                        <h4>Offer : </h4>
-                        <h4>10% cashback on all</h4>
-                      </div>
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-                <md-card >
-                    <md-card-content>
-                      <img src="public/assets/trendingOffer3.png">
-                      <div layout="row">
-                        <h4>Mall : </h4>
-                        <h4>Forum Koramangala</h4>
-                      </div>
-                      <div layout="row">
-                        <h4>Offer : </h4>
-                        <h4>10% cashback on all</h4>
-                      </div>
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-                <md-card >
-                    <md-card-content>
-                      <img src="public/assets/trendingOffer4.jpg">
-                      <div layout="row">
-                        <h4>Mall : </h4>
-                        <h4>Forum Koramangala</h4>
-                      </div>
-                      <div layout="row">
-                        <h4>Offer : </h4>
-                        <h4>10% cashback on all</h4>
-                      </div>
-                    </md-card-content>
-                    <md-card-actions>
-                      <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
-                    </md-card-actions>
-                </md-card>
-              </div><!--Trending offfers end-->
-            </div><!--right section end-->
-        </div><!--main content end-->
-      </div><!--big div end-->
-      <div id="footer" layout="row">
-        <div flex-offset="10" layout="column">
-          <h4>Service</h4>
-          <span>Online Help</span>
-          <span>Contact Us</span>
-          <span>Order Status</span>
-          <span>Change Location</span>
-          <span>FAQ's</span>
+      </md-tabs>
+      <div><!--Trending offfers starts-->
+        <div layout="row" style="height:40px;background-color:grey;" layout-align="center center" >
+          Trending Offers
         </div>
-        <div flex-offset="10" layout="column">
-          <h4>BrowseMalls Shops</h4>
-          <span>T-Shirt</span>
-          <span>Mens</span>
-          <span>Womens</span>
-          <span>Gift Cards</span>
-          <span>Shoes</span>
-        </div>
-        <div flex-offset="10" layout="column">
-          <h4>Policies</h4>
-          <span>Terms of Use</span>
-          <span>Privecy Policy</span>
-          <span>Refund Policy</span>
-          <span>Billing System</span>
-          <span>Ticket System</span>
-        </div>
-        <div flex-offset="10" layout="column">
-          <h4>About Shopper</h4>
-          <span>Company Information</span>
-          <span>Careers</span>
-          <span>Store Location</span>
-          <span>Partners</span>
-        <span>Copyright</span>
-        </div>
-        <div flex-offset="10" layout="column">
-          <h4>About BrowseMalls</h4>
-          <div layout=row>
-            <input type="text" placeholder="Your email" id="inputText">
-            <i class="material-icons sendButton" style="font-size:40px;">send</i>
-          </div>
-          <span>Get the most recent updates from
-our site and be updated your self...</span>
-        </div>
-
-      </div><!--footer-->
+        <div layout="row" layout-align="center center">
+          <md-card layout="column" layout-align="center center">
+                      <md-card-content>
+                        <img src="public/assets/trendingOffer2.jpg">
+                        <div layout="row">
+                          <h4>Mall : </h4>
+                          <h4>Forum Koramangala</h4>
+                        </div>
+                        <div layout="row">
+                          <h4>Offer : </h4>
+                          <h4>10% cashback on all</h4>
+                        </div>
+                      </md-card-content>
+                      <md-card-actions>
+                        <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+                      </md-card-actions>
+                  </md-card>
+                  <md-card layout="column" layout-align="center center">
+                      <md-card-content>
+                        <img src="public/assets/trendingOffer3.png">
+                        <div layout="row">
+                          <h4>Mall : </h4>
+                          <h4>Forum Koramangala</h4>
+                        </div>
+                        <div layout="row">
+                          <h4>Offer : </h4>
+                          <h4>10% cashback on all</h4>
+                        </div>
+                      </md-card-content>
+                      <md-card-actions>
+                        <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+                      </md-card-actions>
+                  </md-card>
+                  <md-card layout="column" layout-align="center center">
+                      <md-card-content>
+                        <img src="public/assets/trendingOffer4.jpg">
+                        <div layout="row">
+                          <h4>Mall : </h4>
+                          <h4>Forum Koramangala</h4>
+                        </div>
+                        <div layout="row">
+                          <h4>Offer : </h4>
+                          <h4>10% cashback on all</h4>
+                        </div>
+                      </md-card-content>
+                      <md-card-actions>
+                        <md-button class="md-raised" id="offerButton" ng-href="views/html/shopDetails2.html">Browse Offer</md-button>
+                      </md-card-actions>
+                  </md-card>
+                </div>
+      </div><!--Trending offfers end-->
+    </div><!--right section end-->
+  </div><!--main content end-->
+  <!-- <br><br><br><br><br><br><br><br><br><br> -->
+  <div id="footer" layout="row" layout-padding >
+    <div flex-offset="10" layout="column">
+      <h4>Service</h4>
+      <span>Online Help</span>
+      <span>Contact Us</span>
+      <span>Order Status</span>
+      <span>Change Location</span>
+      <span>FAQ's</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>BrowseMalls Shops</h4>
+      <span>T-Shirt</span>
+      <span>Mens</span>
+      <span>Womens</span>
+      <span>Gift Cards</span>
+      <span>Shoes</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>Policies</h4>
+      <span>Terms of Use</span>
+      <span>Privecy Policy</span>
+      <span>Refund Policy</span>
+      <span>Billing System</span>
+      <span>Ticket System</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>About Shopper</h4>
+      <span>Company Information</span>
+      <span>Careers</span>
+      <span>Store Location</span>
+      <span>Partners</span>
+      <span>Copyright</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>About BrowseMalls</h4>
+      <div layout=row>
+        <input type="text" placeholder="Your email" id="inputText">
+        <i class="material-icons sendButton" style="font-size:40px;">send</i>
+      </div>
+      <span>Get the most recent updates from our site and be updated your self...</span>
+    </div>
   </div>
-
-
-
 </body>
-</html>
