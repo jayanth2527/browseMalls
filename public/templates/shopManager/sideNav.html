@@ -1,0 +1,32 @@
+<div layout="row"ng-controller="shopmanagerctrl" style="float:left;">
+  <div flex="25">
+    <md-sidenav
+      class="md-sidenav-left"
+      md-component-id="left"
+      md-is-locked-open="$mdMedia('gt-md')"
+      md-whiteframe="4"
+      >
+    <md-content ng-repeat="items in menu" layout-padding style="background-color: #d6d6c2">
+       <md-icon class="material-icons">{{items.icon}}</md-icon>
+       <md-button class="md-primary" ng-click="selectcg(items.item)" ui-sref={{items.item}}>{{items.item}}</md-button>
+       <div ng-if="categoryoptn && items.item =='Upload Products/Add Offers' " layout="row" layout-wrap flex>
+        <div flex-xs flex="50">
+          <md-checkbox aria-label="Select All"
+                       ng-checked="isChecked()"
+                       md-indeterminate="isIndeterminate()"
+                       ng-click="toggleAll()">
+            <span ng-if="isChecked()">Un-</span>Select All
+          </md-checkbox>
+        </div>
+          <div class="demo-select-all-checkboxes" flex="100" ng-repeat="item in category">
+            <md-checkbox ng-checked="exists(item, selectcategory)" ng-click="toggle(item, selectcategory)">
+             {{ item }}
+            </md-checkbox>
+          </div>
+        </div>
+        <md-divider>
+    </md-content >
+    </md-sidenav>
+  </div>
+  <div flex="75" ui-view="offers" style="height:685px"></div>
+</div>

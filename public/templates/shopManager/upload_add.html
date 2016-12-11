@@ -1,0 +1,63 @@
+<div layout="column" style="height:100%" ng-controller="shopmanagerctrl">
+<div flex="15">
+  <md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+  <h1 class="md-no-sticky md-title">Current Offers</h1>
+</div>
+</md-toolbar>
+</div>
+<div layout="row" flex="90" style="height:100%">
+  <div flex="40" layout="column">
+    <div flex="80" >
+    <md-list-item ng-click="navigateTo(offer.offer_description, $event)" ng-repeat="offer in offers"  >
+    <h4 style="margin-left:0">{{ offer.offer }}</h4>
+     <md-checkbox aria-label="offer.offer" class="md-secondary"></md-checkbox>
+
+     </md-list-item>
+    <md-button class="md-primary" ng-click="showofferform()" target="_blank"><u>Click here to add New Offers</u></md-button>
+  </div>
+  <div flex="20" layout="row">
+    <div flex="50" layout-align="center center"><md-button class="md-raised md-primary" ng-click="successapply($event)">Apply Offers</md-button></div>
+    <div flex="50" layout-align="center center"><md-button class="md-raised md-primary">Upload Products</md-button></div>
+  </div>
+  </div>
+  <div flex="55">
+    <div ng-if="showform" flex-offset="5">
+        <md-card>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">Add New Offer</span>
+                </md-card-title-text>
+
+              </md-card-title>
+              <md-card-content>
+                <form>
+                   <md-input-container ng-model="offer" class="md-block" flex-gt-sm>
+                     <label>Offer's Name</label>
+                     <input ng-model="user.city">
+                   </md-input-container>
+                   <md-input-container ng-model="offer_description" class="md-block">
+                        <label>Offer's Description</label>
+                        <textarea maxlength="150" rows="5" md-select-on-focus></textarea>
+                  </md-input-container>
+                  <md-input-container class="md-block" ng-model="offer_category" flex-gt-sm>
+                         <label>Select Offer Category</label>
+                         <md-select ng-model="offer" >
+                           <md-option ng-repeat="offer in offerlist" ng-value="{{offer.type}}">
+                             {{offer.name}}
+                           </md-option>
+                         </md-select>
+                       </md-input-container>
+                       <br>
+                       <div flex-offset="50">
+                    <md-button class="md-raised" ng-click="showofferform()">Cancel</md-button>
+                      <md-button class="md-raised md-primary" type="submit" ng-click="offersubmit(offer,offer_description,offer_category)">Submit</md-button>
+                      <div>
+              </form>
+
+             </md-card-content>
+           </md-card>
+  </div>
+  </div>
+</div>
+</div>

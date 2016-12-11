@@ -1,0 +1,21 @@
+<div class="" ng-controller="sendCommunication" style="float:left;padding-left:10%;padding-top:5%;">
+  <form class="col-lg-12">
+    <div class="form-group">
+      <label class="">Mail To:</label>
+      <input class="form-control" type="text" name="mailTo" value="" ng-model="mailTo">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Subject</label>
+      <input class="form-control" type="text" name="mailSubject" value="" ng-model="mailSubject">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Body</label>
+      <br>
+      <textarea class="form-control" rows="8" cols="80" name="mailBody" value="" ng-model="mailBody"></textarea>
+    </div>
+    <br>
+    <md-button class="md-raised" name="" ng-click="sendMail()">Send Mail</md-button>
+  </form>
+</div>

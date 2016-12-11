@@ -10,37 +10,38 @@ h1,h2,h3,h4,h5,h6{
 #header{
   /*margin-top: 20px;*/
   background-color: #DCDCDC;
-  height: 80px;
+  height: 15%;
 }
-.upper_header a{
-  text-decoration: none;
-  color: black;
+
+.upper_header{
+  background-color: black;
 }
+
+.white-text{
+  color:white !important;
+}
+
 #mainContent{
   /*margin-top: 50px;*/
+  height:150%;
 }
 #offerButton{
   background-color: #09B2D6;
   color:white;
   /*margin-left: 80px;*/
 }
+#offertoolbar{
+  background-color: #9E9E9E;
+  text-align: center;
+  font-size: 26px;
+  padding: 10px;
+  color: rgb(78, 81, 70);
+  font-weight: bold;
+
+}
 #footer{
    background-color: #DCDCDC;
-}
-
-.titleTextDiv{
-  height: 1px;
-  border-top: 3px solid #e1e1e1;
-  text-align: center;
-  position: relative;
-}
-.titleTextSpan{
-  position: relative;
-  top: -.7em;
-  background: white;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
+   overflow: auto;
 }
 #inputText{
 
@@ -67,6 +68,7 @@ h1,h2,h3,h4,h5,h6{
   font-weight: bold;
   margin-left: 50px;
   font-size: 16px;
+  z-index: 1;
 }
 .spanExplore{
 
@@ -85,3 +87,33 @@ md-input-container{
 md-card{
 
 }
+
+
+#uploadEvent{
+
+  padding: 5% 20% 0 25%;
+}
+#mySidenav > a > h4{
+  padding-bottom: 10px;
+  color: grey;
+}
+#mySidenav{
+  width:240px;
+  float: left;
+  padding: 0px;
+  background-color:#d6d6c2;
+  min-height:90vh;
+}
+
+/*category checkbox*/
+HTMLJSCSS
+.checkboxdemoSelectAll .demo-legend {
+  color: #3F51B5; }
+
+.checkboxdemoSelectAll .demo-fieldset {
+  border-style: solid;
+  border-width: 1px;
+  height: 100%; }
+
+.checkboxdemoSelectAll .demo-select-all-checkboxes {
+  padding-left: 30px; }

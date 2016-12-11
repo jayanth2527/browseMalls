@@ -1,0 +1,64 @@
+
+<div id="uploadEvent">
+  <label>
+  <input type="radio" ng-model="creat" ng-click="showMallManager=true;showShopManager=false;">Create Mall Manager
+  </label>
+  <label>
+  <input type="radio" ng-model="creat" ng-click="showShopManager=true;showMallManager=false;">Create Shop Manager</label>
+<br><br>
+  <form class="col-lg-12" ng-if="showMallManager">
+    <div class="form-group">
+      <label class="">Mall Name</label>
+      <input class="form-control" type="text" name="mall_name" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Mall Manager Name</label>
+      <input class="form-control" type="text" name="manager_name" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Mall Description</label>
+      <input class="form-control" type="text" name="mall_desc" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Upload Mall Images</label>
+      <input class="form-control" type="file" name="mall_images" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Mall Address</label>
+      <input class="form-control" type="file" name="mall_address" value="">
+    </div>
+    <br>
+  </form>
+
+  <form class="col-lg-12" ng-if="showShopManager">
+    <div class="form-group">
+      <label class="">Shop Name</label>
+      <input class="form-control" type="text" name="mall_name" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Shop Manager Name</label>
+      <input class="form-control" type="text" name="manager_name" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Brand Description</label>
+      <input class="form-control" type="text" name="mall_desc" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Upload Shop Images</label>
+      <input class="form-control" type="file" name="mall_images" value="">
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="">Shop Address</label>
+      <input class="form-control" type="file" name="mall_address" value="">
+    </div>
+    <br>
+  </form>
+</div>

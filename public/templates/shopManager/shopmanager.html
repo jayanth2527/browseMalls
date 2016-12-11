@@ -1,0 +1,98 @@
+<div class="upper_header" layout="row" layout-align="end">
+     <div flex-offset="10">
+       <md-icon class="material-icons" style="color:white" >account_circle</md-icon>
+         <md-button class="white-text"> Pooja Singh</md-button>
+    </div>
+     <div>
+      <span style="color:grey">|</span>
+      <md-button class="md-accent" ui-sref="Home"> Sign Out</md-button>
+    </div>
+    </div>
+    <div id="header" layout="row"  style="margin-bottom:5px;" >
+      <div flex="30" layout-align="start center">
+      <img ng-src="/assets/logo.png" alt="" style="height:60px; width:300px;padding-left:20px;padding-top:10px"/>
+    </div>
+      <div flex="25" flex-offset="10" layout-align="center center">
+        <img ng-src="/assets/Levi's_logo.png" alt="" style="height:50px; width:200px;padding-left:20px; padding-top:10px"/>
+      </div>
+        <div flex="10" flex-offset="25" layout-align="center end" style="margin-top:30px">
+        <md-icon class="material-icons" style="font-size:18px" >domain</md-icon><span class="md-title">Orion Mall</span>
+      </div>
+    </div>
+    <!--Home-->
+
+    <div layout="row"ng-controller="shopmanagerctrl" >
+      <div flex="25">
+        <md-sidenav
+          class="md-sidenav-left"
+          md-component-id="left"
+          md-is-locked-open="$mdMedia('gt-md')"
+          md-whiteframe="4"
+          >
+        <md-content ng-repeat="items in menu" layout-padding style="background-color: #d6d6c2">
+           <md-icon class="material-icons">{{items.icon}}</md-icon>
+           <md-button class="md-primary" ng-click="selectcg(items.item)" ui-sref={{items.item}}>{{items.item}}</md-button>
+           <div ng-if="categoryoptn && items.item =='Upload Products/Add Offers' " layout="row" layout-wrap flex>
+            <div flex-xs flex="50">
+              <md-checkbox aria-label="Select All"
+                           ng-checked="isChecked()"
+                           md-indeterminate="isIndeterminate()"
+                           ng-click="toggleAll()">
+                <span ng-if="isChecked()">Un-</span>Select All
+              </md-checkbox>
+            </div>
+              <div class="demo-select-all-checkboxes" flex="100" ng-repeat="item in category">
+                <md-checkbox ng-checked="exists(item, selectcategory)" ng-click="toggle(item, selectcategory)">
+                 {{ item }}
+                </md-checkbox>
+              </div>
+            </div>
+            <md-divider>
+        </md-content >
+        </md-sidenav>
+      </div>
+      <div flex="75" ui-view="offers" style="height:685px"></div>
+    </div>
+    <br>
+    <div id="footer" layout="row" layout-padding>
+      <div flex-offset="10" layout="column">
+        <h4>Service</h4>
+        <span>Online Help</span>
+        <span>Contact Us</span>
+        <span>Order Status</span>
+        <span>Change Location</span>
+        <span>FAQ's</span>
+      </div>
+      <div flex-offset="10" layout="column">
+        <h4>BrowseMalls Shops</h4>
+        <span>T-Shirt</span>
+        <span>Mens</span>
+        <span>Womens</span>
+        <span>Gift Cards</span>
+        <span>Shoes</span>
+      </div>
+      <div flex-offset="10" layout="column">
+        <h4>Policies</h4>
+        <span>Terms of Use</span>
+        <span>Privecy Policy</span>
+        <span>Refund Policy</span>
+        <span>Billing System</span>
+        <span>Ticket System</span>
+      </div>
+      <div flex-offset="10" layout="column">
+        <h4>About Shopper</h4>
+        <span>Company Information</span>
+        <span>Careers</span>
+        <span>Store Location</span>
+        <span>Partners</span>
+        <span>Copyright</span>
+      </div>
+      <div flex-offset="10" layout="column">
+        <h4>About BrowseMalls</h4>
+        <div layout=row>
+          <input type="text" placeholder="Your email" id="inputText">
+          <i class="material-icons sendButton" style="font-size:40px;">send</i>
+        </div>
+        <span>Get the most recent updates from our site and be updated your self...</span>
+      </div>
+    </div>

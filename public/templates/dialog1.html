@@ -1,0 +1,28 @@
+<md-dialog aria-label="Cities" ng-controller="cntr">
+  <form ng-cloak name="myForm1">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Select Location</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          x
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <md-input-container flex-offset=5>
+          <label>Select Location</label>
+          <md-select ng-model="location" name="location" required>
+            <md-option ng-value="location" ng-repeat="location in locations track by $index">{{location}}</md-option>
+          </md-select>
+        </md-input-container>
+        <div ng-show="myForm1.location.$error.required" style="color:red;">*Select a location</div>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button class="md-button" ng-disabled="myForm1.$invalid" ng-click="submitDialog(location)">
+        Submit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

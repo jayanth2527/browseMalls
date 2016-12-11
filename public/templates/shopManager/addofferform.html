@@ -1,0 +1,28 @@
+<div>
+  <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Add New Offer</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+     <md-input-container class="md-block" flex-gt-sm>
+       <label>Offer's Name</label>
+       <input ng-model="user.city">
+     </md-input-container>
+     <md-input-container class="md-block">
+          <label>Offer's Description</label>
+          <textarea  md-maxlength="150" rows="5" md-select-on-focus></textarea>
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+           <label>Select Offer Category</label>
+           <md-select >
+             <md-option ng-repeat="offer in offerlist" value="{{offer.type}}">
+               {{offer.name}}
+             </md-option>
+           </md-select>
+         </md-input-container>
+       </md-card-content>
+       <md-card>/
+
+</div>

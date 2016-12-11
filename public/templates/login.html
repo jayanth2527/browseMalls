@@ -1,0 +1,31 @@
+<md-dialog aria-label="location" ng-controller="cntr">
+  <form ng-cloak name="myForm1">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Login</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          x
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="padding:10px 30px;width:300px;">
+        <div class="form-group">
+          <label>Username</label>
+          <input class="form-control" type="text" name="username" ng-model="login.username" required>
+        </div>
+        <span ng-show="myForm1.username.$error.required" style="color:red;">*Please enter Username</span>
+        <div class="form-group">
+          <label>Password</label>
+          <input class="form-control" type="password" name="pwd" ng-model="login.pwd" required>
+        </div>
+        <span ng-show="myForm1.pwd.$error.required" style="color:red;">*Please enter Password</span>
+
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button class="md-button" ng-disabled="myForm1.$invalid" ng-click="submitSignIn(login)">
+        Submit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

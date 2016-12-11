@@ -1,0 +1,58 @@
+<!--
+<div id="header" layout="row" layout-align="start center" style="margin-bottom:5px;" ng-cloak ng-controller="cntr">
+  <div flex="35">
+    <img ng-src="/assets/logo.png" alt="" style="height:50px; width:300px;padding-left:20px"/>
+  </div>
+ <div ng-mouseover="openExploreFunction()" ng-mouseleave="closeExploreFunction()" id="exploreDropbox" flex="35">
+    Explore by Category
+    <i class="material-icons" ng-hide=explore>keyboard_arrow_down</i>
+    <i class="material-icons" ng-show=explore>keyboard_arrow_up</i>
+    <div ng-show="explore" class="exploreBox" layout=column>
+      <div layout=row>
+        <span class="spanExplore">Home | </span>
+        <span class="spanExplore">Men | </span>
+        <span class="spanExplore">Women | </span>
+        <span class="spanExplore">Baby and Kids | </span>
+        <span class="spanExplore">Furniture | </span>
+        <span class="spanExplore">Books</span>
+      </div>
+      <div layout=row>
+        <span class="spanExplore">Events | </span>
+        <span class="spanExplore">Laptops | </span>
+        <span class="spanExplore">Food | </span>
+        <span class="spanExplore">Sports | </span>
+        <span class="spanExplore">Others | </span>
+        <span class="spanExplore"></span>
+      </div>
+    </div>
+  </div>
+  <div flex="30" flex-offset="20">
+    <md-input-container >
+      <label>Search</label>
+      <input ng-model="search">
+    </md-input-container>
+    <i class="material-icons">search</i>
+  </div>
+</div> -->
+
+<div class="upper_header" layout="row" layout-align="end">
+     <div flex-offset="10">
+       <md-icon class="material-icons" style="color:white" >account_circle</md-icon>
+         <md-button class="white-text"> Pooja Singh</md-button>
+    </div>
+     <div>
+      <span style="color:grey">|</span>
+      <md-button class="md-accent" ui-sref="Home"> Sign Out</md-button>
+    </div>
+    </div>
+    <div id="header" layout="row"  style="margin-bottom:5px;" >
+      <div flex="30" layout-align="start center">
+      <img ng-src="/assets/logo.png" alt="" style="height:60px; width:300px;padding-left:20px;padding-top:10px"/>
+    </div>
+      <div flex="25" flex-offset="10" layout-align="center center">
+        <!-- <img ng-src="/assets/Levi's_logo.png" alt="" style="height:50px; width:200px;padding-left:20px; padding-top:10px"/> -->
+      </div>
+        <div flex="10" flex-offset="25" layout-align="center end" style="margin-top:30px">
+        <md-icon class="material-icons" style="font-size:18px" >domain</md-icon><span class="md-title">Orion Mall</span>
+      </div>
+    </div>

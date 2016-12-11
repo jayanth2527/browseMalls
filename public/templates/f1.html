@@ -1,0 +1,276 @@
+<div ng-cloak ng-controller="cntr" ng-init="OnLoadFunction()">
+
+
+  <div class="upper_header" layout="row" layout-align="end" flex >
+    <div flex-offset=10 ng-if="username.length==0">
+      <md-button class="white-text" ng-click="signIn()"><md-icon class="material-icons" style="color:white;font-size:18px" >lock</md-icon> Sign In</md-button><span style="color:grey">|</span>
+      <span style="color:#2196F3">&nbsp; New User?</span><md-button class="white-text">Sign-Up</md-button>
+   </div>
+   <div flex-offset=10 ng-if="username.length>0">
+       <md-icon class="material-icons" style="color:white" >account_circle</md-icon>
+         <md-button class="white-text"> {{username}}</md-button>
+      <span style="color:grey">|</span>
+      <md-button class="md-accent"> Sign Out</md-button>
+   </div>
+   <div layout="row" layout-align="start center">
+     <md-icon class="material-icons" style="color:#FF6E40;font-size:20px">place</md-icon>
+    <md-input-container>
+      <label>Select Location</label>
+      <md-select style="background-color:white" ng-model="location">
+        <md-option ng-value="location" ng-repeat="location in locations track by $index" ng-click="locationFunction(location);">{{location}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+  </div>
+  <div id="header" layout="row" layout-align="start center" style="margin-bottom:5px;">
+    <div flex="35">
+      <img ng-src="/assets/logo.png" alt="" style="height:50px; width:300px;padding-left:20px"/>
+      <!-- <a ui-sref="shopManager">shopManager</a>
+      <a ui-sref="mallManager">mallManager</a> -->
+    </div>
+   <div ng-mouseover="openExploreFunction()" ng-mouseleave="closeExploreFunction()" id="exploreDropbox" flex="35">
+      Explore by Category
+      <i class="material-icons" ng-hide=explore>keyboard_arrow_down</i>
+      <i class="material-icons" ng-show=explore>keyboard_arrow_up</i>
+      <div ng-show="explore" class="exploreBox" layout=column>
+        <div layout=row>
+          <span class="spanExplore">Home | </span>
+          <span class="spanExplore">Men | </span>
+          <span class="spanExplore">Women | </span>
+          <span class="spanExplore">Baby and Kids | </span>
+          <span class="spanExplore">Furniture | </span>
+          <span class="spanExplore">Books</span>
+        </div>
+        <div layout=row>
+          <span class="spanExplore">Events | </span>
+          <span class="spanExplore">Laptops | </span>
+          <span class="spanExplore">Food | </span>
+          <span class="spanExplore">Sports | </span>
+          <span class="spanExplore">Others | </span>
+          <span class="spanExplore"></span>
+        </div>
+      </div>
+    </div>
+    <div flex="30" flex-offset="20">
+      <md-input-container >
+        <label>Search</label>
+        <input ng-model="search">
+      </md-input-container>
+      <i class="material-icons">search</i>
+    </div>
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="/assets/main_page_pic1.jpg" alt="Chania" style="height:500px;">
+      </div>
+      <div class="item">
+        <img src="/assets/main_page_pic2.jpg" alt="Chania" style="height:500px;">
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div id="mainContent" layout="row">
+    <!--left section starts-->
+    <div flex="20" layout="column">
+      <md-toolbar flex="5" layout="row" layout-align="center center">
+        <md-icon flex="5" flex-offset="5" class="material-icons" style="color:#FF6E40;">place</md-icon>
+      <h4 flex="85">{{selected_location}}</h4>
+    </md-toolbar>
+      <div layout="column">
+      <md-card flex="30" style="height:300px">
+        <md-card-header-text>
+          <h4 layout=row layout-align="center">List of Malls</h4>
+        </md-card-header-text>
+        <md-input-container>
+          <label>Enter mall name</label>
+          <input ng-model="searchMall">
+        </md-input-container>
+        <md-card-content ng-model="filter_malls" layout=column style="overflow-y:scroll;">
+          <md-checkbox ng-repeat="mall in filter_malls | filter:searchMall" ng-click="creatArray('malls',mall);brandFunction(mall);" >
+            {{mall}}
+          </md-checkbox>
+        </md-card-content>
+      </md-card>
+      <md-card flex="30" style="height:300px">
+        <md-card-header-text>
+          <h4 layout=row layout-align="center">Brands</h4>
+        </md-card-header-text>
+        <md-input-container>
+          <label>Enter brand name</label>
+          <input ng-model="searchBrand">
+        </md-input-container>
+        <md-card-content layout="column" style="overflow-y:scroll;">
+          <md-checkbox ng-model="brands" ng-repeat="brand in brands| filter : searchBrand" ng-click="creatArray('brands',brand);offerFunction(brand)">
+            {{brand}}
+          </md-checkbox>
+        </md-card-content>
+      </md-card>
+      <md-card flex="30" style="height:300px">
+        <md-card-header-text>
+          <h4 layout=row layout-align="center">Multi Brand</h4>
+        </md-card-header-text>
+        <md-input-container>
+          <label>Enter multi brand name</label>
+          <input ng-model="searchMultiBrand">
+        </md-input-container>
+        <md-card-content layout="column" style="overflow-y:scroll;">
+
+          <md-checkbox ng-model="selectedBrand" ng-repeat="brands in brandData | filter : searchMultiBrand" ng-click="creatArray('multiBrands',brands);" >
+            {{brands}}
+          </md-checkbox>
+        </md-card-content>
+      </md-card>
+    </div>
+    </div><!--left section end-->
+    <!--right section start-->
+    <div layout="column" flex="80">
+    <div flex="50" layout="column">
+      <md-toolbar id="offertoolbar" flex="10" style="background-color:#9E9E9E">
+        Offers
+      </md-toolbar>
+      <md-tabs flex="80" md-border-bottom md-dynamic-height >
+        <md-tab label={{offer_type.offer_name}} ng-repeat="offer_type in offer_details">
+          <md-content>
+            <div layout="row" layout-align="center center">
+              <md-card layout="column" layout-align="center center" ng-if="card.image_url.length != null" ng-repeat="card in offer_type.offer_objects">
+
+                <md-card-content>
+
+                  <img src={{card.image_url}}>
+                  <div layout="row">
+                    <h4>Mall : </h4>
+                    <h4>{{card.mall_id}}</h4>
+                    <!-- <h4>Forum Koramangala</h4> -->
+                  </div>
+                  <div layout="row">
+                    <h4>Offer : </h4>
+                    <h4>{{card.offer}}</h4>
+                  </div>
+                </md-card-content>
+                <md-card-actions>
+                  <md-button class="md-raised" id="offerButton" ui-sref="shopDetails">Browse Offer</md-button>
+                </md-card-actions>
+              </md-card>
+
+            </div>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </div>
+
+      <div flex="50" layout="column"><!--Trending offfers starts-->
+        <md-toolbar id="offertoolbar" flex="10" style="background-color:#9E9E9E">
+         Trending Offers
+        </md-toolbar>
+        <div layout="row" flex="90" layout-align="center center">
+          <md-card layout="column" layout-align="center center">
+            <md-card-content>
+              <img src="/assets/trendingOffer2.jpg">
+              <div layout="row">
+                <h4>Mall : </h4>
+                <h4>Forum Koramangala</h4>
+              </div>
+              <div layout="row">
+                <h4>Offer : </h4>
+                <h4>10% cashback on all</h4>
+              </div>
+            </md-card-content>
+            <md-card-actions>
+              <md-button class="md-raised" id="offerButton" ui-sref="shopDetails">Browse Offer</md-button>
+            </md-card-actions>
+          </md-card>
+          <md-card layout="column" layout-align="center center">
+            <md-card-content>
+              <img src="/assets/trendingOffer3.png">
+              <div layout="row">
+                <h4>Mall : </h4>
+                <h4>Forum Koramangala</h4>
+              </div>
+              <div layout="row">
+                <h4>Offer : </h4>
+                <h4>10% cashback on all</h4>
+              </div>
+            </md-card-content>
+            <md-card-actions>
+              <md-button class="md-raised" id="offerButton" ui-sref="shopDetails">Browse Offer</md-button>
+            </md-card-actions>
+          </md-card>
+          <md-card layout="column" layout-align="center center">
+            <md-card-content>
+              <img src="/assets/trendingOffer4.jpg">
+              <div layout="row">
+                <h4>Mall : </h4>
+                <h4>Forum Koramangala</h4>
+              </div>
+              <div layout="row">
+                <h4>Offer : </h4>
+                <h4>10% cashback on all</h4>
+              </div>
+            </md-card-content>
+            <md-card-actions>
+              <md-button class="md-raised" id="offerButton" ui-sref="shopDetails">Browse Offer</md-button>
+            </md-card-actions>
+          </md-card>
+        </div>
+      </div><!--Trending offfers end-->
+    </div><!--right section end-->
+  </div><!--main content end-->
+</br></br></br></br></br>
+  <div id="footer" layout="row" layout-padding >
+    <div flex-offset="10" layout="column">
+      <h4>Service</h4>
+      <span>Online Help</span>
+      <span>Contact Us</span>
+      <span>Order Status</span>
+      <span>Change Location</span>
+      <span>FAQ's</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>BrowseMalls Shops</h4>
+      <span>T-Shirt</span>
+      <span>Mens</span>
+      <span>Womens</span>
+      <span>Gift Cards</span>
+      <span>Shoes</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>Policies</h4>
+      <span>Terms of Use</span>
+      <span>Privecy Policy</span>
+      <span>Refund Policy</span>
+      <span>Billing System</span>
+      <span>Ticket System</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>About Shopper</h4>
+      <span>Company Information</span>
+      <span>Careers</span>
+      <span>Store Location</span>
+      <span>Partners</span>
+      <span>Copyright</span>
+    </div>
+    <div flex-offset="10" layout="column">
+      <h4>About BrowseMalls</h4>
+      <div layout=row>
+        <input type="text" placeholder="Your email" id="inputText">
+        <i class="material-icons sendButton" style="font-size:40px;">send</i>
+      </div>
+      <span>Get the most recent updates from our site and be updated your self...</span>
+    </div>
+  </div>
+</div>
